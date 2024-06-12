@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
+//    id("com.google.devtools.ksp")
 }
 
 android {
@@ -86,9 +87,9 @@ dependencies {
 
     //Room
     val room_version = "2.5.2"
-    implementation("androidx.room:room-runtime:$room_version")
-    kapt("androidx.room:room-compiler:$room_version")
-    implementation("androidx.room:room-ktx:2.5.2")
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 
     implementation("io.coil-kt:coil-compose:2.4.0")
 
@@ -110,7 +111,7 @@ dependencies {
 
 }
 
-kapt {
-    correctErrorTypes = true
-//    verbose = true
-}
+//kapt {
+//    correctErrorTypes = true
+////    verbose = true
+//}
